@@ -17,6 +17,15 @@ from pathlib import Path
 PROJ_DIR = Path(__file__).parent.parent.absolute()
 sys.path.append(str(PROJ_DIR))
 
+# Create necessary directories if they don't exist
+DATA_DIR = os.path.join(PROJ_DIR, 'data')
+MODELS_DIR = os.path.join(PROJ_DIR, 'models')
+ALERTS_DIR = os.path.join(PROJ_DIR, 'alerts')
+
+os.makedirs(DATA_DIR, exist_ok=True)
+os.makedirs(MODELS_DIR, exist_ok=True)
+os.makedirs(ALERTS_DIR, exist_ok=True)
+
 # Import project modules
 from scripts.fetch_prices import fetch_and_save_prices
 from scripts.transform_data import transform_data
