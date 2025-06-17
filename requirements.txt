@@ -6,3 +6,4 @@ streamlit==1.22.0
 matplotlib>=3.7.1
 requests==2.29.0
 python-dotenv==1.0.0
+python-imghdr==0.1.1
